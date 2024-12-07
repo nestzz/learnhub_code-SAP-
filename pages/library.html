@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library - S.A.P AI</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" href="../css/library.css">
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+</head>
+<body>
+    <!-- Gradient background -->
+    <div class="gradient-bg">
+        <div class="gradient-1"></div>
+        <div class="gradient-2"></div>
+        <div class="gradient-3"></div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <a href="../index.html" class="nav-button left-nav">Home</a>
+    <a href="discover.html" class="nav-button right-nav">Back</a>
+
+    <!-- Library Content -->
+    <div class="library-section py-4">
+        <div class="container">
+            <h1 class="text-center mb-4">Digital Library</h1>
+            
+            <!-- Search Section -->
+            <div class="search-container mb-4">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search for books...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" id="searchButton">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="categories-container mb-4">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-outline-primary" data-category="computer science">Computer Science</button>
+                    <button class="btn btn-outline-primary" data-category="mathematics">Mathematics</button>
+                    <button class="btn btn-outline-primary" data-category="physics">Physics</button>
+                    <button class="btn btn-outline-primary" data-category="engineering">Engineering</button>
+                </div>
+            </div>
+
+            <!-- Books Grid -->
+            <div class="row" id="booksContainer">
+                <!-- Books will be dynamically inserted here -->
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="text-center d-none">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        google.load("books", "1");
+
+        function initialize() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            const booksContainer = document.getElementById('booksContainer');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const categoryButtons = document.querySelectorAll('[data-category]');
+
+            function searchBooks(query) {
+                loadingSpinner.classList.remove('d-none');
+                booksContainer.innerHTML = '';
+
+                const request = new google.books.DefaultViewer(query);
+                request.setSearchTerm(query);
+                request.setMaxResults(12);
+
+                request.getVolumes((volumes) => {
+                    loadingSpinner.classList.add('d-none');
+                    
+                    if (!volumes || volumes.length === 0) {
+                        booksContainer.innerHTML = '<p class="text-center w-100">No books found.</p>';
+                        return;
+                    }
+
+                    volumes.forEach(volume => {
+                        const volumeInfo = volume.volumeInfo;
+                        const bookCard = createBookCard(volumeInfo);
+                        booksContainer.appendChild(bookCard);
+                    });
+                });
+            }
+
+            function createBookCard(bookInfo) {
+                const col = document.createElement('div');
+                col.className = 'col-lg-3 col-md-4 col-sm-6 mb-4';
+
+                const card = document.createElement('div');
+                card.className = 'card h-100 book-card';
+
+                const thumbnail = bookInfo.imageLinks ? bookInfo.imageLinks.thumbnail : 'placeholder.jpg';
+                
+                card.innerHTML = `
+                    <img src="${thumbnail}" class="card-img-top" alt="${bookInfo.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${bookInfo.title}</h5>
+                        <p class="card-text">${bookInfo.authors ? bookInfo.authors.join(', ') : 'Unknown Author'}</p>
+                        <a href="${bookInfo.previewLink}" class="btn btn-primary" target="_blank">
+                            Read Preview
+                        </a>
+                    </div>
+                `;
+
+                col.appendChild(card);
+                return col;
+            }
+
+            // Event Listeners
+            searchButton.addEventListener('click', () => {
+                const query = searchInput.value.trim();
+                if (query) {
+                    searchBooks(query);
+                }
+            });
+
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        searchBooks(query);
+                    }
+                }
+            });
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const category = button.dataset.category;
+                    searchInput.value = category;
+                    searchBooks(category);
+                });
+            });
+
+            // Initial search
+            searchBooks('computer science');
+        }
+
+        google.setOnLoadCallback(initialize);
+    </script>
+
+
+</body>
+</html>
