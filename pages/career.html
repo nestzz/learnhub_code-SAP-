@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Counselling - S.A.P AI</title>
+    <link rel="stylesheet" href="../style-main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="career-hero">
+        <div class="career-overlay"></div>
+        <div class="career-content">
+            <h1>Shape Your Future</h1>
+            <p>Discover your perfect career path with AI-powered guidance</p>
+            <a href="career-roadmap.html" class="nav-button"><button class="start-journey-btn">Start Your Journey</button></a>
+        </div>
+    </div>
+
+    <div class="career-services">
+        <div class="service-card">
+            <div class="service-icon">🎯</div>
+            <h3>Personality Assessment</h3>
+            <p>Understand your strengths and interests through AI analysis</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">📊</div>
+            <h3>Career Matching</h3>
+            <p>Get personalized career recommendations based on your profile</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🎓</div>
+            <h3>Education Planning</h3>
+            <p>Map out your educational path to reach your career goals</p>
+        </div>
+    </div>
+
+    <div class="career-cta">
+        <h2>Ready to Begin?</h2>
+        <p>Take the first step towards your dream career</p>
+        <button class="schedule-btn">Schedule Consultation</button>
+    </div>
+
+    <div class="career-assessment">
+        <div class="assessment-header">
+            <h2>Career Personality Assessment</h2>
+            <p>How much would you enjoy doing each of these activities in your work?</p>
+            <div class="progress-indicator">
+                <p>Step 1 of 5</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 20%"></div>
+                </div>
+            </div>
+        </div>
+
+        <form id="careerForm" class="question-form">
+            <div class="questions-container" data-page="1">
+                <div class="question-item">
+                    <p>1. Design websites and digital interfaces</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q1" value="1">
+                            <span>Strongly Dislike</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="2">
+                            <span>Dislike</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="3">
+                            <span>Neutral</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="4">
+                            <span>Like</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="5">
+                            <span>Strongly Like</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>2. Analyze data and create statistical reports</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q2" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q2" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q2" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q2" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>3. Lead and coordinate team projects</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q3" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q3" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q3" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q3" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>4. Solve complex technical problems</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q4" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q4" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q4" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q4" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>5. Create and edit visual content</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q5" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q5" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q5" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q5" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>6. Write and edit content for different audiences</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q6" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q6" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q6" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q6" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>7. Research and analyze market trends</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q7" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q7" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q7" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q7" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>8. Develop software applications</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q8" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q8" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q8" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q8" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>9. Manage client relationships and communications</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q9" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q9" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q9" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q9" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>10. Plan and execute digital marketing campaigns</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q10" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q10" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q10" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q10" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="questions-container" data-page="2" style="display: none;">
+                <div class="question-item">
+                    <p>11. Troubleshoot hardware and network issues</p>
+                    <div class="options">
+                        <label><input type="radio" name="q11" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q11" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q11" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q11" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q11" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>12. Create and manage social media content</p>
+                    <div class="options">
+                        <label><input type="radio" name="q12" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q12" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q12" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q12" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q12" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>13. Develop mobile applications</p>
+                    <div class="options">
+                        <label><input type="radio" name="q13" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q13" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q13" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q13" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q13" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>14. Conduct user research and usability testing</p>
+                    <div class="options">
+                        <label><input type="radio" name="q14" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q14" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q14" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q14" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q14" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>15. Optimize website performance and SEO</p>
+                    <div class="options">
+                        <label><input type="radio" name="q15" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q15" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q15" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q15" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q15" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>16. Create and edit video content</p>
+                    <div class="options">
+                        <label><input type="radio" name="q16" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q16" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q16" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q16" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q16" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>17. Manage project budgets and resources</p>
+                    <div class="options">
+                        <label><input type="radio" name="q17" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q17" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q17" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q17" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q17" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>18. Develop AI and machine learning models</p>
+                    <div class="options">
+                        <label><input type="radio" name="q18" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q18" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q18" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q18" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q18" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>19. Create and maintain documentation</p>
+                    <div class="options">
+                        <label><input type="radio" name="q19" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q19" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q19" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q19" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q19" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>20. Analyze and improve business processes</p>
+                    <div class="options">
+                        <label><input type="radio" name="q20" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q20" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q20" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q20" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q20" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="questions-container" data-page="3" style="display: none;">
+                <div class="question-item">
+                    <p>21. Create and optimize database structures</p>
+                    <div class="options">
+                        <label><input type="radio" name="q21" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q21" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q21" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q21" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q21" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>22. Design user interfaces and experiences</p>
+                    <div class="options">
+                        <label><input type="radio" name="q22" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q22" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q22" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q22" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q22" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>23. Manage customer support and service</p>
+                    <div class="options">
+                        <label><input type="radio" name="q23" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q23" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q23" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q23" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q23" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>24. Develop and implement marketing strategies</p>
+                    <div class="options">
+                        <label><input type="radio" name="q24" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q24" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q24" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q24" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q24" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>25. Conduct security audits and assessments</p>
+                    <div class="options">
+                        <label><input type="radio" name="q25" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q25" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q25" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q25" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q25" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>26. Create and deliver presentations</p>
+                    <div class="options">
+                        <label><input type="radio" name="q26" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q26" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q26" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q26" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q26" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>27. Develop and maintain APIs</p>
+                    <div class="options">
+                        <label><input type="radio" name="q27" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q27" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q27" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q27" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q27" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>28. Manage vendor relationships</p>
+                    <div class="options">
+                        <label><input type="radio" name="q28" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q28" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q28" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q28" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q28" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>29. Perform quality assurance testing</p>
+                    <div class="options">
+                        <label><input type="radio" name="q29" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q29" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q29" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q29" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q29" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>30. Create and analyze financial reports</p>
+                    <div class="options">
+                        <label><input type="radio" name="q30" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q30" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q30" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q30" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q30" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="questions-container" data-page="4" style="display: none;">
+                <div class="question-item">
+                    <p>31. Develop cybersecurity strategies</p>
+                    <div class="options">
+                        <label><input type="radio" name="q31" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q31" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q31" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q31" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q31" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>32. Manage email marketing campaigns</p>
+                    <div class="options">
+                        <label><input type="radio" name="q32" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q32" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q32" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q32" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q32" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>33. Design and implement network infrastructure</p>
+                    <div class="options">
+                        <label><input type="radio" name="q33" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q33" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q33" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q33" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q33" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>34. Create and maintain technical documentation</p>
+                    <div class="options">
+                        <label><input type="radio" name="q34" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q34" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q34" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q34" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q34" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>35. Develop and implement training programs</p>
+                    <div class="options">
+                        <label><input type="radio" name="q35" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q35" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q35" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q35" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q35" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>36. Analyze and optimize user experience</p>
+                    <div class="options">
+                        <label><input type="radio" name="q36" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q36" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q36" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q36" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q36" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>37. Manage software development lifecycle</p>
+                    <div class="options">
+                        <label><input type="radio" name="q37" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q37" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q37" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q37" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q37" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>38. Conduct competitive analysis</p>
+                    <div class="options">
+                        <label><input type="radio" name="q38" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q38" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q38" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q38" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q38" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>39. Develop automation scripts</p>
+                    <div class="options">
+                        <label><input type="radio" name="q39" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q39" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q39" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q39" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q39" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>40. Manage product lifecycles</p>
+                    <div class="options">
+                        <label><input type="radio" name="q40" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q40" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q40" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q40" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q40" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="questions-container" data-page="5" style="display: none;">
+                <div class="question-item">
+                    <p>41. Implement cloud computing solutions</p>
+                    <div class="options">
+                        <label><input type="radio" name="q41" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q41" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q41" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q41" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q41" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>42. Create and manage content calendars</p>
+                    <div class="options">
+                        <label><input type="radio" name="q42" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q42" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q42" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q42" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q42" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>43. Perform data visualization and reporting</p>
+                    <div class="options">
+                        <label><input type="radio" name="q43" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q43" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q43" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q43" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q43" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>44. Manage IT infrastructure</p>
+                    <div class="options">
+                        <label><input type="radio" name="q44" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q44" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q44" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q44" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q44" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>45. Develop business strategies</p>
+                    <div class="options">
+                        <label><input type="radio" name="q45" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q45" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q45" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q45" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q45" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>46. Create and optimize advertising campaigns</p>
+                    <div class="options">
+                        <label><input type="radio" name="q46" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q46" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q46" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q46" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q46" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>47. Implement DevOps practices</p>
+                    <div class="options">
+                        <label><input type="radio" name="q47" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q47" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q47" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q47" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q47" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>48. Conduct risk assessments</p>
+                    <div class="options">
+                        <label><input type="radio" name="q48" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q48" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q48" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q48" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q48" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>49. Develop and maintain system architecture</p>
+                    <div class="options">
+                        <label><input type="radio" name="q49" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q49" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q49" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q49" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q49" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>50. Manage stakeholder relationships</p>
+                    <div class="options">
+                        <label><input type="radio" name="q50" value="1"><span>Strongly Dislike</span></label>
+                        <label><input type="radio" name="q50" value="2"><span>Dislike</span></label>
+                        <label><input type="radio" name="q50" value="3"><span>Neutral</span></label>
+                        <label><input type="radio" name="q50" value="4"><span>Like</span></label>
+                        <label><input type="radio" name="q50" value="5"><span>Strongly Like</span></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-navigation">
+                <button type="button" class="prev-btn" disabled>Previous</button>
+                <button type="button" class="next-btn">Next Page ></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
